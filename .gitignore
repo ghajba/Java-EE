@@ -16,6 +16,7 @@ target
 .project
 .classpath
 .factorypath
+.tern-project
 .idea
 
 .DS_Store
