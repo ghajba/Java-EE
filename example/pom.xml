@@ -47,8 +47,8 @@
 
         <!-- Define the version of the JBoss BOMs we want to import to specify 
             tested stacks. -->
-        <version.jboss.bom>8.0.0.Final</version.jboss.bom>
-        <version.arquillian.container>8.0.0.Final</version.arquillian.container>
+        <version.jboss.bom>8.1.0.Final</version.jboss.bom>
+        <version.arquillian.container>8.1.0.Final</version.arquillian.container>
 
         <!-- other plugin versions -->
         <version.compiler.plugin>3.1</version.compiler.plugin>
