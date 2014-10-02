@@ -16,4 +16,12 @@ public class Circle extends Shape {
 	@Column(name = "RADIUS")
 	private Integer radius;
 
+	public Integer getRadius() {
+		return radius;
+	}
+
+	public void setRadius(Integer radius) {
+		this.radius = radius;
+	}
+
 }

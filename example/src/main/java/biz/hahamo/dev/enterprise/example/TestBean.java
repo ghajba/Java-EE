@@ -3,13 +3,15 @@
  */
 package biz.hahamo.dev.enterprise.example;
 
+import java.util.List;
+
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
 import javax.faces.event.ActionEvent;
 import javax.inject.Inject;
 
 /**
- * @author gaborh
+ * @author GHajba
  *
  */
 @SessionScoped
@@ -26,7 +28,14 @@ public class TestBean {
 		//Get submit button id
 //		buttonId = event.getComponent().getClientId();
 		System.out.println("TestIt");
-		repo.findAll();
+		List<Shape> findAll = repo.findAll();
+		System.out.println(findAll.size());
+		Shape s = findAll.get(0);
+		System.out.println(s.getClass());
+		Circle c = (Circle) s;
+		System.out.println(c.getRadius());
+		Triangle t = (Triangle) findAll.get(1);
+		System.out.println(t.getEqualSites());
  
 	}
 }

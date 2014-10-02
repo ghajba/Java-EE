@@ -18,4 +18,12 @@ public class Shape implements Serializable {
 	@Id
 	private String idString;
 
+	public String getIdString() {
+		return idString;
+	}
+
+	public void setIdString(String idString) {
+		this.idString = idString;
+	}
+
 }
