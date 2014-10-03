@@ -11,7 +11,7 @@ import javax.persistence.InheritanceType;
 @Entity
 @Inheritance(strategy = InheritanceType.JOINED)
 @DiscriminatorColumn(name="TYPE")
-public class Shape implements Serializable {
+public abstract class Shape implements Serializable {
 	
 	private static final long serialVersionUID = 8917616829186723579L;
 
