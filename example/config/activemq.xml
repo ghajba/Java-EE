@@ -1,0 +1,18 @@
+<managementContext>
+	<!-- managementContext createConnector="false"/ -->
+	<managementContext createConnector="true" connectorPort="2011" jmxDomainName="test.domain">
+		<property xmlns="http://www.springframework.org/schema/beans" name="environment">
+			<map xmlns="http://www.springframework.org/schema/beans">
+				<entry xmlns="http://www.springframework.org/schema/beans"
+					key="jmx.remote.x.password.file" value="${activemq.base}/conf/jmx.password" />
+				<entry xmlns="http://www.springframework.org/schema/beans"
+					key="jmx.remote.x.access.file" value="${activemq.base}/conf/jmx.access" />
+			</map>
+		</property>
+	</managementContext>
+</managementContext>
+
+<destinations>
+	<queue physicalName="example.queue" />
+	<topic physicalName="example.topic" />
+</destinations>

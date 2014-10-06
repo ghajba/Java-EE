@@ -1,0 +1,34 @@
+<subsystem xmlns="urn:jboss:domain:resource-adapters:2.0">
+            <resource-adapters>
+                <resource-adapter id="activemq-rar">
+                    <archive>
+						activemq-rar.rar
+					</archive>
+                    <transaction-support>XATransaction</transaction-support>
+                    <config-property name="UserName">
+                        defaultUser
+                    </config-property>
+                    <config-property name="Password">
+                        defaultPassword
+                    </config-property>
+                    <config-property name="ServerUrl">
+                        tcp://localhost:61616
+                    </config-property>
+                    <connection-definitions>
+                        <connection-definition class-name="org.apache.activemq.ra.ActiveMQManagedConnectionFactory" jndi-name="java:/ActiveMQConnectionFactory" enabled="true" use-java-context="true" pool-name="ActiveMQConnectionFactory"/>
+                    </connection-definitions>
+                    <admin-objects>
+                        <admin-object class-name="org.apache.activemq.command.ActiveMQQueue" jndi-name="example.queue" use-java-context="true" pool-name="example.queue">
+                            <config-property name="PhysicalName">
+                              example.queue
+                            </config-property>
+                        </admin-object>
+                        <admin-object class-name="org.apache.activemq.command.ActiveMQTopic" jndi-name="example.topic" use-java-context="true" pool-name="example.topic">
+                            <config-property name="PhysicalName">
+                                example.topic
+                            </config-property>
+                        </admin-object>
+                    </admin-objects>
+                </resource-adapter>
+            </resource-adapters>
+        </subsystem>
