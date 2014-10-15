@@ -33,7 +33,7 @@
     </resource-adapters>
 </subsystem>
 
-<subsystem xmlns="urn:jboss:domain:ejb3:1.4">
+<subsystem xmlns="urn:jboss:domain:ejb3:2.0">
   <mdb>
     <resource-adapter-ref resource-adapter-name="activemq-rar"/>
     <bean-instance-pool-ref pool-name="mdb-strict-max-pool"/>
