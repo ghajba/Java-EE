@@ -25,7 +25,7 @@ public class Ora01795Repo {
 
     public void createOra01795() {
 
-        Query query = entityManager.createQuery("FROM Fehler WHERE id in (:ids)", String.class);
+        Query query = entityManager.createQuery("FROM TestEntity WHERE id in (:ids)", String.class);
         query.setParameter("ids", generateBigList());
         query.getResultList();
     }
@@ -33,7 +33,7 @@ public class Ora01795Repo {
     @Interceptors(BigListInterceptor.class)
     public void handleOra01795(final List<Long> parameters) {
 
-        Query query = entityManager.createQuery("FROM Fehler WHERE id in (:ids)", String.class);
+        Query query = entityManager.createQuery("FROM TestEntity WHERE id in (:ids)", String.class);
         query.setParameter("ids", parameters);
         query.getResultList();
     }
