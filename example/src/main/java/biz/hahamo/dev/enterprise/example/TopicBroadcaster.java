@@ -9,12 +9,13 @@ import javax.jms.Session;
 import javax.jms.Topic;
 
 /**
+ * Simple broadcaster class to a topic.
  * 
  * @author GHajba
  */
 public class TopicBroadcaster {
 
-    @Resource(lookup = "ExampleConnectionFactory")
+    @Resource(lookup = "ActiveMQConnectionFactory")
     private ConnectionFactory connectionFactory;
 
     @Resource(lookup = "example.topic")
@@ -28,12 +29,12 @@ public class TopicBroadcaster {
         messageProducer.send(session.createTextMessage("Hello JMS example!"));
     }
 
-    public void postTextObjectMessage() throws JMSException {
+    public void postObjectMessage() throws JMSException {
         Connection connection = connectionFactory.createConnection();
         Session session = connection.createSession(false, Session.AUTO_ACKNOWLEDGE);
         MessageProducer messageProducer = session.createProducer(topic);
 
-        messageProducer.send(session.createObjectMessage("Hello JMS example!"));
+        messageProducer.send(session.createObjectMessage(new TopicObject("Message for broadcasted topic", 2L)));
     }
 
 }

@@ -15,7 +15,7 @@ import javax.jms.Session;
  */
 public class QueueSender {
 
-    @Resource(lookup = "ExampleConnectionFactory")
+    @Resource(lookup = "ActiveMQConnectionFactory")
     private ConnectionFactory connectionFactory;
 
     @Resource(lookup = "example.queue")
@@ -34,6 +34,6 @@ public class QueueSender {
         Session session = connection.createSession(false, Session.AUTO_ACKNOWLEDGE);
         MessageProducer messageProducer = session.createProducer(queue);
 
-        messageProducer.send(session.createObjectMessage("Hello JMS example!"));
+        messageProducer.send(session.createObjectMessage(new QueueObject("This is the test message to a queue", 1L)));
     }
 }

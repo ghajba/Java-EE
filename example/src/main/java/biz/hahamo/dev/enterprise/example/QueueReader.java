@@ -24,7 +24,15 @@ public class QueueReader implements MessageListener {
             if (message instanceof TextMessage) {
                 System.out.println("TextMessage received: " + ((TextMessage) message).getText());
             } else if (message instanceof ObjectMessage) {
-                System.out.println("ObjectMessage received.");
+                ObjectMessage objectMessage = (ObjectMessage) message;
+                if (objectMessage instanceof QueueObject) {
+                    QueueObject queueObject = (QueueObject) objectMessage.getObject();
+                    System.out.println(String.format("QueueObject found. ID is %d and the message is: %s", queueObject.getId(),
+                            queueObject.getMessage()));
+                } else {
+                    System.out.println("ObjectMessage received of type" + objectMessage.getObject().getClass());
+                }
+
             } else {
                 System.out.println("Unknown message type:" + message.getClass());
             }

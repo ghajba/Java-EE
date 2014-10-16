@@ -1,0 +1,25 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:f="http://java.sun.com/jsf/core">
+
+<ui:composition template="/WEB-INF/templates/Template.xhtml">
+    <ui:define name="content">
+        <h:form>
+            <h:commandButton value="send text message to queue" action="sendTextToQueue"  actionListener="#{testBean.sendTextMessageToQueue}"/>
+        </h:form>
+        <h:form>
+            <h:commandButton value="send object message to queue" action="sendObjectToQueue"  actionListener="#{testBean.sendObjectMessageToQueue}"/>
+        </h:form>
+        <h:form>
+            <h:commandButton value="broadcast text message" action="broadcastTest"  actionListener="#{testBean.broadcastTextMessage}"/>
+        </h:form>
+        <h:form>
+            <h:commandButton value="broadcast object message" action="broadcastObject"  actionListener="#{testBean.broadcastObjectMessage}"/>
+        </h:form>
+    </ui:define>
+</ui:composition>
+</html>
