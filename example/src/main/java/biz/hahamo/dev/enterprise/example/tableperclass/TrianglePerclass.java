@@ -1,7 +1,6 @@
-package biz.hahamo.dev.enterprise.example.joined;
+package biz.hahamo.dev.enterprise.example.tableperclass;
 
 import javax.persistence.Column;
-import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
 import javax.persistence.Inheritance;
 import javax.persistence.InheritanceType;
@@ -9,9 +8,9 @@ import javax.persistence.Table;
 
 @Entity
 @Inheritance(strategy = InheritanceType.JOINED)
-@DiscriminatorValue("TRIANGLE")
-@Table(name = "TRIANGLE_JOINED")
-public class Triangle extends Shape {
+// @DiscriminatorValue("TRIANGLE")
+@Table(name = "TRIANGLE_PERCLASS")
+public class TrianglePerclass extends ShapePerclass {
 
     private static final long serialVersionUID = -1783113903772499963L;
 

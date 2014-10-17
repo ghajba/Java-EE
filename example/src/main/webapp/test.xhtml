@@ -9,7 +9,16 @@
 <ui:composition template="/WEB-INF/templates/Template.xhtml">
     <ui:define name="content">
         <h:form>
-            <h:commandButton value="Test" action="login"  actionListener="#{testBean.testIt}"/>
+            <h:commandButton value="Test Joined inheritance" action="submit"  actionListener="#{testBean.testJoined}"/>
+        </h:form>
+        <h:form>
+            <h:commandButton value="Test Single Table inheritance" action="submit"  actionListener="#{testBean.testSingletable}"/>
+        </h:form>
+        <h:form>
+            <h:commandButton value="Test Table Per Class inheritance" action="submit"  actionListener="#{testBean.testPerclass}"/>
+        </h:form>
+        <h:form>
+            <h:commandButton value="Insert testdata" action="submit"  actionListener="#{testBean.createEntities}"/>
         </h:form>
     </ui:define>
 </ui:composition>
