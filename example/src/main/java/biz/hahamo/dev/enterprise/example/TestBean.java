@@ -9,6 +9,10 @@ import javax.faces.bean.SessionScoped;
 import javax.faces.event.ActionEvent;
 import javax.inject.Inject;
 
+import biz.hahamo.dev.enterprise.example.joined.Circle;
+import biz.hahamo.dev.enterprise.example.joined.Shape;
+import biz.hahamo.dev.enterprise.example.joined.Triangle;
+
 /**
  * @author GHajba
  *

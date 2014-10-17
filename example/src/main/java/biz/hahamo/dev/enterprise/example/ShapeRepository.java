@@ -6,6 +6,8 @@ import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
+import biz.hahamo.dev.enterprise.example.joined.Shape;
+
 @Stateless
 public class ShapeRepository {
 	
