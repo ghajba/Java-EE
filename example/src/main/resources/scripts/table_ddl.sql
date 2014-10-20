@@ -1,8 +1,8 @@
-create table shape_joined (idString varchar(255 char) primary key, type varchar(25 char));
-create table triangle_joined(idString varchar(255 char) primary key, equal_sites boolean);
-create table circle_joined(idString varchar(255 char) primary key, radius number);
+create table shapejoined (idString varchar(255 char) primary key);
+create table trianglejoined(idString varchar(255 char) primary key, equalsites boolean);
+create table circlejoined(idString varchar(255 char) primary key, radius number);
 
-create table shape_singletable(idString varchar(255 char) primary key, type varchar(25 char), equal_sites boolean, radius number);
+create table shapesingletable(idString varchar(255 char) primary key, dtype varchar(25 char), equalsites boolean, radius number);
 
-create table triangle_perclass(idString varchar(255 char) primary key, type varchar(25 char), equal_sites boolean);
-create table circle_perclass(idString varchar(255 char) primary key, type varchar(25 char), radius number);
+create table triangleperclass(idString varchar(255 char) primary key, equalsites boolean);
+create table circleperclass(idString varchar(255 char) primary key, radius number);

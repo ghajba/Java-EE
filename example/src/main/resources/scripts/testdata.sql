@@ -1,10 +1,10 @@
-insert into ShapeJoind (idstring, type) values('1', 'CIRCLE');
-insert into ShapeJoind (idstring, type) values('2', 'TRIANGLE');
+insert into ShapeJoined (idstring) values('1');
+insert into ShapeJoined (idstring) values('2');
 insert into CircleJoined (idstring, radius) values('1', 5);
 insert into TriangleJoined ( idstring , equal_sites ) values('2', 1);
 
-insert into ShapeSingletable (idString, type, radius, equal_sites) values ('1', 'CIRCLE');
-insert into ShapeSingletable (idString, type, radius, equal_sites) values ('2', 'TRIANGLE');
+insert into ShapeSingletable (idString, dtype, radius, equalsites) values ('1', 'CircleJoined', 42, null);
+insert into ShapeSingletable (idString, dtype, radius, equalsites) values ('2', 'TriangleJoined', null, 0);
 
-insert into CirclePerclass () values();
-insert into TrianglePerclass () values();
+insert into CirclePerclass (idString, radius) values('1', 23);
+insert into TrianglePerclass (idString, equalsites) values('2', 1);

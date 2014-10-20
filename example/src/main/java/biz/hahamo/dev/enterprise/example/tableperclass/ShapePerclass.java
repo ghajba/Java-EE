@@ -6,12 +6,9 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Inheritance;
 import javax.persistence.InheritanceType;
-import javax.persistence.Table;
 
 @Entity
-@Inheritance(strategy = InheritanceType.JOINED)
-// @DiscriminatorColumn(name = "TYPE")
-@Table(name = "SHAPE_PERCLASS")
+@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
 public abstract class ShapePerclass implements Serializable {
 
     private static final long serialVersionUID = 8917616829186723579L;
