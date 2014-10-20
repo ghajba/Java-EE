@@ -3,7 +3,6 @@ package biz.hahamo.dev.enterprise.example.joined;
 import javax.persistence.Entity;
 
 @Entity
-// @Inheritance(strategy = InheritanceType.JOINED)
 // @DiscriminatorValue("TRIANGLE")
 // @Table(name = "TRIANGLE_JOINED")
 public class TriangleJoined extends ShapeJoined {
