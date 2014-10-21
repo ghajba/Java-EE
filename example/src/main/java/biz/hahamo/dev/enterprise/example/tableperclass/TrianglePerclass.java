@@ -19,4 +19,8 @@ public class TrianglePerclass extends ShapePerclass {
         this.equalSites = equalSites;
     }
 
+    @Override
+    public String toString() {
+        return super.toString() + " / equalSites: " + equalSites;
+    }
 }

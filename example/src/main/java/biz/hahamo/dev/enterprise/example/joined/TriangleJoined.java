@@ -1,9 +1,10 @@
 package biz.hahamo.dev.enterprise.example.joined;
 
+import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
 
 @Entity
-// @DiscriminatorValue("TRIANGLE")
+@DiscriminatorValue("CircleJoined")
 // @Table(name = "TRIANGLE_JOINED")
 public class TriangleJoined extends ShapeJoined {
 
@@ -20,4 +21,8 @@ public class TriangleJoined extends ShapeJoined {
         this.equalSites = equalSites;
     }
 
+    @Override
+    public String toString() {
+        return super.toString() + " / equalSites: " + equalSites;
+    }
 }

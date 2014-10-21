@@ -24,4 +24,9 @@ public abstract class ShapePerclass implements Serializable {
         this.idString = idString;
     }
 
+    @Override
+    public String toString() {
+        return "idString: " + idString;
+    }
+
 }

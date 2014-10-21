@@ -2,6 +2,7 @@ package biz.hahamo.dev.enterprise.example.singletable;
 
 import java.io.Serializable;
 
+import javax.persistence.DiscriminatorColumn;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Inheritance;
@@ -9,7 +10,7 @@ import javax.persistence.InheritanceType;
 
 @Entity
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
-// @DiscriminatorColumn(name = "TYPE")
+@DiscriminatorColumn(name = "TYPE")
 // @Table(name = "SHAPE_SINGLETABLE")
 public abstract class ShapeSingletable implements Serializable {
 
@@ -26,4 +27,8 @@ public abstract class ShapeSingletable implements Serializable {
         this.idString = idString;
     }
 
+    @Override
+    public String toString() {
+        return "idString: " + idString;
+    }
 }

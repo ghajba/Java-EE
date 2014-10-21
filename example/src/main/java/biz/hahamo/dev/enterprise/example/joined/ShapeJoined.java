@@ -2,6 +2,7 @@ package biz.hahamo.dev.enterprise.example.joined;
 
 import java.io.Serializable;
 
+import javax.persistence.DiscriminatorColumn;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Inheritance;
@@ -9,7 +10,7 @@ import javax.persistence.InheritanceType;
 
 @Entity
 @Inheritance(strategy = InheritanceType.JOINED)
-// @DiscriminatorColumn(name = "TYPE")
+@DiscriminatorColumn(name = "TYPE")
 // @Table(name = "SHAPE_JOINED")
 public abstract class ShapeJoined implements Serializable {
 
@@ -26,4 +27,8 @@ public abstract class ShapeJoined implements Serializable {
         this.idString = idString;
     }
 
+    @Override
+    public String toString() {
+        return "idString: " + idString;
+    }
 }

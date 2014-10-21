@@ -19,4 +19,9 @@ public class CirclePerclass extends ShapePerclass {
         this.radius = radius;
     }
 
+    @Override
+    public String toString() {
+        return super.toString() + " / radius: " + radius;
+    }
+
 }

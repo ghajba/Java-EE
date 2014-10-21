@@ -33,4 +33,7 @@ public class ShapeRepository {
         em.persist(entity);
     }
 
+    public <T> T find(Class<T> entityClass, String idString) {
+        return em.find(entityClass, idString);
+    }
 }

@@ -3,7 +3,8 @@ package biz.hahamo.dev.enterprise.example.singletable;
 import javax.persistence.Entity;
 
 @Entity
-// @DiscriminatorValue("TRIANGLE")
+// @DiscriminatorValue("CircleSingletable") // won't work out: Hibernate throws an exception at startup
+// @Table(name = "TRIANGLE_SINGLE")
 public class TriangleSingletable extends ShapeSingletable {
 
     private static final long serialVersionUID = -1783113903772499963L;
@@ -19,4 +20,8 @@ public class TriangleSingletable extends ShapeSingletable {
         this.equalSites = equalSites;
     }
 
+    @Override
+    public String toString() {
+        return super.toString() + " / equalSites: " + equalSites;
+    }
 }

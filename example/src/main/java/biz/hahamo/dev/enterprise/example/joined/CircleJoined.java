@@ -3,7 +3,7 @@ package biz.hahamo.dev.enterprise.example.joined;
 import javax.persistence.Entity;
 
 @Entity
-// @DiscriminatorValue(value = "CIRCLE")
+// @DiscriminatorValue(value = "CircleJoined")
 // @Table(name = "CIRCLE_JOINED")
 public class CircleJoined extends ShapeJoined {
 
@@ -18,6 +18,11 @@ public class CircleJoined extends ShapeJoined {
 
     public void setRadius(Integer radius) {
         this.radius = radius;
+    }
+
+    @Override
+    public String toString() {
+        return super.toString() + " / radius: " + radius;
     }
 
 }
