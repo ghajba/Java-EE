@@ -1,0 +1,1 @@
+This is an example application for my blog to introduce AttributeConverter JPA annotations for LocalDate and other Java 8 date-time constructs.
