@@ -8,7 +8,7 @@ import org.springframework.data.repository.query.Param;
 
 /**
  * A basic Spring Data JPA repository
- * 
+ *
  * @author GHajba
  *
  */
@@ -21,7 +21,7 @@ public interface ExampleRepository extends JpaRepository<ExampleEntity, Long> {
      *            the parameter which is used for the filter
      * @return a list of found entries or an empty list if nothing found
      */
-    @Query(nativeQuery = true, value = "SELECT id, createdBy FROM ExampleEntity where createdBy LIKE %:createdBy%")
+    // @Query(nativeQuery = true, value = "SELECT id, createdBy FROM ExampleEntity where createdBy LIKE %:createdBy%")
+    @Query(name = "ExampleRepository.findInformationBasedOnCreator")
     List<Object[]> findInformationBasedOnCreator(@Param("createdBy") String createdBy);
-
 }

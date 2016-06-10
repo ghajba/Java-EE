@@ -56,7 +56,7 @@ public class RestEndpoint {
     public Response displayEntities(@DefaultValue("") @QueryParam("createdBy") String createdBy) {
         final StringBuilder sb = new StringBuilder();
         sb.append("<html><head> <meta charset=\"UTF-8\"> </head>Following entities are in the database:<br/>");
-        final List<EntityDTO> dtos = this.repository.findInformationBasedOnCreator(createdBy).stream()
+        final List<EntityDTO> dtos = this.repository.findInformationBasedOnCreator("%" + createdBy + "%").stream()
                 .map(v -> new EntityDTO(((BigInteger) v[0]).longValue(), (String) v[1])).collect(Collectors.toList());
         if (dtos.isEmpty()) {
             sb.append("No entries found :(");
