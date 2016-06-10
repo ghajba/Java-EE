@@ -1,0 +1,20 @@
+<html>
+	<head>
+		<title>JPA with Queries in XML files</title>
+		<meta name="author" content="GHajba" />
+	</head>
+	<body>
+		<h1>Example website for JPA Queries in XML configuration</h1>
+		<h3>Add a new entity</h3>
+		<form method="post" action="example/entities">
+		  Created by<span style="color:red;">*</span>: <input type="text" name="createdBy"/><br/>
+		  <input type="submit" value="Create"/>
+		</form>
+		<hr/>
+		<h3>Query entites by creator</h3>
+		<form method="get" action="example/entities">
+			Created by<span style="color:red;">*</span>: <input type="text" name="createdBy"/><br/>
+		  	<input type="submit" value="Retreive"/>
+		</form>
+	</body>
+</html>
